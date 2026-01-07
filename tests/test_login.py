@@ -1,6 +1,6 @@
 from pages.login_page import LoginPage
+from config import Config  # Import the data from your new file
 
-# We pass 'driver' as an argument. Pytest automatically finds it in conftest.py
 def test_login_success(driver):
     print("\n--- Starting POM Login Test ---")
     
@@ -8,11 +8,11 @@ def test_login_success(driver):
     login_page = LoginPage(driver)
     
     # 2. ACTION
-    print("Loading Page...")
-    login_page.load()
+    print(f"Loading Page: {Config.BASE_URL}")
+    login_page.load()  # You might need to update load() to use Config.BASE_URL too, but for now let's focus on login
     
-    print("Logging In...")
-    login_page.login("standard_user", "secret_sauce")
+    print(f"Logging In as: {Config.USERNAME}")
+    login_page.login(Config.USERNAME, Config.PASSWORD)
     
     # 3. ASSERT
     current_url = login_page.get_url()
