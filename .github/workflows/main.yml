@@ -22,4 +22,4 @@ jobs:
 
     - name: Run Tests
       run: |
-        python -m pytest tests/test_login.py --headless
+        python -m pytest tests/test_login.py
