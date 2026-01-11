@@ -1,24 +1,25 @@
-from pages.login_page import LoginPage
-from config import Config  # Import the data from your new file
+import pytest
+from tests.pages.login_page import LoginPage
 
-def test_login_success(driver):
-    print("\n--- Starting POM Login Test ---")
-    
-    # 1. INIT
+# FIXED: We use 'driver' because that is what your conftest.py provides.
+
+def test_standard_user_login(driver):
+    # 1. Initialize the Page Object with the 'driver'
     login_page = LoginPage(driver)
-    
-    # 2. ACTION
-    print(f"Loading Page: {Config.BASE_URL}")
-    login_page.load()  # You might need to update load() to use Config.BASE_URL too, but for now let's focus on login
-    
-    print(f"Logging In as: {Config.USERNAME}")
-    login_page.login(Config.USERNAME, Config.PASSWORD)
-    
-    # 3. ASSERT
-    current_url = login_page.get_url()
-    if "inventory" in current_url:
-        print("✅ PASS: Login Successful")
-        assert True
-    else:
-        print(f"❌ FAIL: Still on {current_url}")
-        assert False
+
+    # 2. Use the Page Object
+    login_page.load()
+    login_page.login("standard_user", "secret_sauce")
+
+    # 3. Verify
+    assert "inventory.html" in driver.current_url
+
+def test_locked_out_user(driver):
+    login_page = LoginPage(driver)
+
+    login_page.load()
+    login_page.login("locked_out_user", "secret_sauce")
+
+    # Verify error message
+    error_msg = driver.find_element(*LoginPage.ERROR_MESSAGE)
+    assert "Epic sadface" in error_msg.text
