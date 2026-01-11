@@ -41,8 +41,3 @@ tests/
 │   └── test_login.py
 ├── reports/        # 📊 Automated HTML Dashboards
 └── requirements.txt
-
-## 🚀 How to Run Locally
-1. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
