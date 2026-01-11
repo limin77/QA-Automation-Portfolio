@@ -33,6 +33,7 @@ This project is integrated with **GitHub Actions**.
 * **Reporting:** Pytest-HTML
 
 ## 📂 Project Structure
+
 ```text
 tests/
 ├── api/            # ⚡ Backend Tests (Requests)
@@ -40,16 +41,19 @@ tests/
 ├── ui/             # 🖥️ Frontend Tests (Selenium)
 │   └── test_login.py
 ├── reports/        # 📊 Automated HTML Dashboards
-└── requirements.txt```
+└── requirements.txt
+```
 
 ## 🚀 How to Run Locally
 
 1. **Install Dependencies:**
-
 ```bash
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 2. **Run All Tests (Parallel Speed Mode):**
-
 ```bash
-pytest -n auto --html=report.html```
+pytest -n auto --html=report.html
+```
+
+![Evidence of Speed](execution_speed_proof.png)
