@@ -1,8 +1,8 @@
 # 🚀 Hybrid QA Automation Framework (Python)
 
-**Engineer:** Mohamad Alimin
-**Status:** ✅ Build Passing (GitHub Actions)
-**Architecture:** Hybrid (Selenium UI + Requests API)
+![Automation Test Status](https://github.com/limin77/Learn-QA-Automation/actions/workflows/main.yml/badge.svg)
+![Engineer](https://img.shields.io/badge/Engineer-Mohamad%20Alimin-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Hybrid%20(UI%20%2B%20API)-orange)
 
 ## 🏆 Project Overview
 This project demonstrates a **Modern, High-Performance approach to Software Quality**. 
