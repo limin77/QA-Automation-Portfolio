@@ -1,6 +1,6 @@
 # 🚀 Hybrid QA Automation Framework (Python)
 
-![QA Automation Status](https://github.com/limin77/Learn-QA-Automation/actions/workflows/main.yml/badge.svg)
+![QA Automation Status](https://github.com/limin77/QA-Automation-Portfolio/actions/workflows/main.yml/badge.svg)
 ![Engineer](https://img.shields.io/badge/Engineer-Mohamad%20Alimin-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-Hybrid%20(UI%20%2B%20API)-orange)
 
