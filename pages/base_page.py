@@ -1,9 +1,10 @@
+# pages/base_page.py
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage:
     """
-    The Parent Class.
+    The Parent Class. 
     It contains generic methods that all pages will use.
     """
     def __init__(self, driver):
@@ -13,7 +14,7 @@ class BasePage:
 
     def find(self, locator):
         """
-        Smart Locator:
+        Smart Locator: 
         Waits for the element to be visible before finding it.
         """
         return self.wait.until(EC.visibility_of_element_located(locator))
