@@ -1,0 +1,4 @@
+
+--- Test 3: Create DATA (POST) ---
+Status Code: 201
+Server Response: {'title': 'QA Automation Engineer', 'body': 'i am learning to automate APIs with Python', 'userId': 1, 'id': 101}

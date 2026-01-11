@@ -1,0 +1,5 @@
+
+--- Starting Negative Login Test ---
+Attempting to login as Locked Out User...
+Error Message Found: Epic sadface: Sorry, this user has been locked out.
+✅ TEST PASSED: The system correctly blocked the user!

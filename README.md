@@ -7,7 +7,7 @@
 ## 🏆 Project Overview
 This project demonstrates a **Modern, High-Performance approach to Software Quality**. 
 Instead of relying 100% on slow UI automation, I built a **Hybrid Framework** that uses:
-1.  **Selenium (UI Layer):** For verifying critical user flows (Login, Cart).
+1.  **Selenium (UI Layer):** For verifying critical user flows (Login, Cart) using the **Page Object Model**.
 2.  **Requests (API Layer):** For validating backend logic and data stability.
 
 ## ⚡ Performance Audit (Real Data)
@@ -27,20 +27,20 @@ This project is integrated with **GitHub Actions**.
 
 ## 🛠️ Tech Stack
 * **Language:** Python 3.x
-* **UI Automation:** Selenium WebDriver
+* **UI Automation:** Selenium WebDriver (with Page Object Model)
 * **API Automation:** Requests
 * **Test Runner:** Pytest (w/ xdist for Parallel Execution)
-* **Reporting:** Pytest-HTML
+* **Reporting:** Allure Reports
 
 ## 📂 Project Structure
 
 ```text
 tests/
 ├── api/            # ⚡ Backend Tests (Requests)
-│   └── test_backend.py
+├── pages/          # 📄 Page Object Models (POM)
+│   └── login_page.py
 ├── ui/             # 🖥️ Frontend Tests (Selenium)
 │   └── test_login.py
-├── reports/        # 📊 Automated HTML Dashboards
 └── requirements.txt
 ```
 
@@ -53,7 +53,16 @@ pip install -r requirements.txt
 
 2. **Run All Tests (Parallel Speed Mode):**
 ```bash
-pytest -n auto --html=report.html
+pytest -n auto --alluredir=allure-results
 ```
 
 ![Evidence of Speed](execution_speed_proof.png)
+
+## 📊 Advanced Reporting (Allure)
+To view the interactive dashboard with graphs and steps:
+
+```bash
+allure serve allure-results
+```
+
+![Allure Report Dashboard](allure_report_proof.png)
